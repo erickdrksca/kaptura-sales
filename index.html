@@ -129,6 +129,60 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .promo li b{color:var(--ink);font-size:13px}
 @media (max-width:960px){.ben{grid-template-columns:1fr}}
 
+/* tableros */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);font:600 14px var(--body);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.dash{border:1px solid var(--line);border-radius:22px;background:var(--bg2);overflow:hidden;box-shadow:0 30px 60px -40px rgba(15,42,68,.45)}
+.dash-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--card);font-size:12.5px}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.url{color:var(--mut);background:var(--bg2);padding:4px 12px;border-radius:999px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.live{margin-left:auto;color:var(--teal);font-weight:600;white-space:nowrap}
+.pn{padding:18px;display:flex;flex-direction:column;gap:14px}
+.pn[hidden]{display:none}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kpi span{font-size:12px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpi b{font:400 clamp(22px,2.4vw,30px)/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.kpi b em{font-style:normal;color:var(--mut);font-size:.6em}
+.kpi small{font-size:12.5px;color:var(--mut)} .kpi small.up{color:var(--teal);font-weight:600}
+.g2{display:grid;grid-template-columns:1.5fr 1fr;gap:12px}.g2b{grid-template-columns:1.4fr 1fr}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.panel h4{margin:0 0 12px;font:600 13px var(--body);color:var(--ink)}
+.ch{width:100%;height:auto;display:block}.ch .gl{stroke:var(--line);stroke-width:1}.ch .tk{fill:var(--mut);font:11px var(--body)}
+.top{list-style:none;margin:0;padding:0;counter-reset:t}
+.top li{display:grid;grid-template-columns:22px 1fr auto;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;counter-increment:t}
+.top li:first-child{border-top:0}.top li::before{content:counter(t);color:var(--acc);font-weight:700}
+.top li b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.tr{height:8px;border-radius:4px;background:var(--bg2);overflow:hidden;display:block}.tr i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.prs{display:flex;flex-direction:column;gap:12px}
+.pr{display:grid;grid-template-columns:120px 1fr 44px;gap:4px 12px;align-items:center;font-size:13.5px}
+.pr .nm{color:var(--ink);font-weight:500}.pr b{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.pr small{grid-column:2/4;color:var(--mut);font-size:12px;margin-top:-2px}
+.pv-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.ring{--p:10;width:140px;height:140px;border-radius:50%;background:conic-gradient(var(--acc) calc(var(--p)*1%),var(--bg2) 0);display:grid;place-items:center;margin-top:4px}
+.ring div{width:108px;height:108px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring b{font:400 30px var(--display);color:var(--ink)}.ring small{font-size:11.5px;color:var(--mut)}
+.pv-n{margin:4px 0 0;font:400 22px var(--display);color:var(--ink)}
+.mini-k{display:flex;gap:18px;font-size:12px;color:var(--mut)}.mini-k span{display:flex;flex-direction:column}.mini-k b{font-size:16px;color:var(--ink);font-variant-numeric:tabular-nums}
+.pv-h{margin:6px 0 0;font-size:12.5px;color:var(--mut)}
+.vrs{display:flex;flex-direction:column}
+.vr{display:grid;grid-template-columns:22px 36px minmax(120px,1fr) 2fr 100px;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.vr:first-child{border-top:0}.vr .pos{color:var(--acc);font-weight:700}
+.av2{width:36px;height:36px;border-radius:50%;background:var(--acc-soft);color:var(--acc);display:grid;place-items:center;font-weight:700;font-size:12px}
+.vr .nm{display:flex;flex-direction:column;color:var(--ink);font-weight:500}.vr .nm small{color:var(--mut);font-weight:400;font-size:12px}
+.vr b{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.tbl th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+.tbl td{padding:10px;border-bottom:1px solid var(--line);color:var(--fg)}.tbl tr:last-child td{border-bottom:0}
+.tbl .n{text-align:right;font-variant-numeric:tabular-nums}
+.st{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.st.s1{background:var(--acc-soft);color:var(--acc)}.st.s2{background:var(--bg2);color:var(--ink)}.st.s3{background:color-mix(in srgb,var(--teal) 16%,transparent);color:var(--teal)}
+.dash-note{font-size:12.5px;color:var(--mut);margin:10px 0 0}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.g2,.g2b{grid-template-columns:1fr}.vr{grid-template-columns:22px 36px 1fr 90px}.vr .tr{display:none}}
+@media (max-width:480px){.pr{grid-template-columns:96px 1fr 40px}.pn{padding:12px}}
+
 /* funciones */
 .feat{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .f{padding:30px 28px 34px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line)}
@@ -220,7 +274,7 @@ footer .r{margin-left:auto}
       kaptura <span>sales</span>
     </a>
     <nav aria-label="Secciones">
-      <a href="#problema">El problema</a><a href="#beneficios">Beneficios</a><a href="#funciones">Funciones</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+      <a href="#problema">El problema</a><a href="#beneficios">Beneficios</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
     </nav>
     <a class="btn btn-acc" href="#contacto">Pide una demo</a>
   </div>
@@ -330,6 +384,73 @@ footer .r{margin-left:auto}
     </div>
   </div>
 </section>
+
+<section class="sec" id="tableros" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Tableros</div>
+      <h2>Ves tu expo <em class="k">en vivo.</em></h2>
+      <p>Cada área tiene su propio tablero, actualizado mientras se vende. Dirección ve el total, cada proveedor ve lo suyo y operación sabe qué falta imprimir o enviar al ERP.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Tableros">
+      <button role="tab" id="tb-dir" aria-selected="true" aria-controls="pn-dir">Dirección</button>
+      <button role="tab" id="tb-prov" aria-selected="false" aria-controls="pn-prov">Proveedores</button>
+      <button role="tab" id="tb-ven" aria-selected="false" aria-controls="pn-ven">Vendedores</button>
+      <button role="tab" id="tb-op" aria-selected="false" aria-controls="pn-op">Operación</button>
+    </div>
+    <div class="dash">
+      <div class="dash-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">tuempresa.kapturasales.com</span><span class="live">● En vivo</span></div>
+      <div class="pn" id="pn-dir" role="tabpanel" aria-labelledby="tb-dir">
+        <div class="kpis">
+          <div class="kpi"><span>Vendido</span><b>$1,060,917</b><small class="up">▲ 46% vs. hora anterior</small></div>
+          <div class="kpi"><span>Pedidos</span><b>420</b><small>72 clientes atendidos</small></div>
+          <div class="kpi"><span>Ticket promedio</span><b>$2,526</b><small>por pedido</small></div>
+          <div class="kpi"><span>Ahorro para clientes</span><b>$53,508</b><small>por precios de expo</small></div>
+        </div>
+        <div class="g2">
+          <div class="panel"><h4>Ventas por hora</h4><svg viewBox="0 0 560 190" class="ch" role="img" aria-label="Ventas por hora, de 9 am a 6 pm"><defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--acc)" stop-opacity=".28"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></linearGradient></defs><line x1="34" x2="550" y1="166.0" y2="166.0" class="gl"/><text x="28" y="170.0" text-anchor="end" class="tk">0k</text><line x1="34" x2="550" y1="114.0" y2="114.0" class="gl"/><text x="28" y="118.0" text-anchor="end" class="tk">50k</text><line x1="34" x2="550" y1="62.0" y2="62.0" class="gl"/><text x="28" y="66.0" text-anchor="end" class="tk">100k</text><line x1="34" x2="550" y1="10.0" y2="10.0" class="gl"/><text x="28" y="14.0" text-anchor="end" class="tk">150k</text><path d="M34.0,166 L34.0,26.0 L91.3,31.5 L148.7,48.4 L206.0,72.9 L263.3,67.1 L320.7,83.6 L378.0,53.3 L435.3,75.2 L492.7,72.1 L550.0,28.9 L550.0,166 Z" fill="url(#ga)"/><polyline points="34.0,26.0 91.3,31.5 148.7,48.4 206.0,72.9 263.3,67.1 320.7,83.6 378.0,53.3 435.3,75.2 492.7,72.1 550.0,28.9" fill="none" stroke="var(--acc)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="550.0" cy="28.9" r="5" fill="var(--acc)" stroke="var(--card)" stroke-width="2"/><text x="34.0" y="184" text-anchor="middle" class="tk">9am</text><text x="148.7" y="184" text-anchor="middle" class="tk">11am</text><text x="263.3" y="184" text-anchor="middle" class="tk">1pm</text><text x="378.0" y="184" text-anchor="middle" class="tk">3pm</text><text x="492.7" y="184" text-anchor="middle" class="tk">5pm</text><text x="550.0" y="184" text-anchor="middle" class="tk">6pm</text></svg></div>
+          <div class="panel"><h4>Productos más vendidos</h4><ol class="top"><li><span>Vela #16 Luz del Alba 16 pz</span><b>$51,167</b></li><li><span>Aceite canola El Dorado 900 ml</span><b>$41,673</b></li><li><span>Jabón tocador Fresca avena 150 g</span><b>$40,948</b></li><li><span>Pañal Suave Bebé mediano 40 pz</span><b>$37,775</b></li><li><span>Toalla de cocina Suave 1 rollo</span><b>$36,498</b></li></ol></div>
+        </div>
+      </div>
+      <div class="pn" id="pn-prov" role="tabpanel" aria-labelledby="tb-prov" hidden>
+        <div class="g2 g2b">
+          <div class="panel"><h4>Avance contra objetivo</h4><div class="prs"><div class="pr"><span class="nm">Luz del Alba</span><span class="tr"><i style="width:26%"></i></span><b>26%</b><small>$104,214 de $400k</small></div><div class="pr"><span class="nm">Papelera Suave</span><span class="tr"><i style="width:19%"></i></span><b>19%</b><small>$129,993 de $700k</small></div><div class="pr"><span class="nm">El Dorado</span><span class="tr"><i style="width:15%"></i></span><b>15%</b><small>$151,219 de $1,000k</small></div><div class="pr"><span class="nm">Cruji</span><span class="tr"><i style="width:13%"></i></span><b>13%</b><small>$80,646 de $600k</small></div><div class="pr"><span class="nm">La Pradera</span><span class="tr"><i style="width:11%"></i></span><b>11%</b><small>$127,933 de $1,200k</small></div><div class="pr"><span class="nm">Galletera Valle</span><span class="tr"><i style="width:10%"></i></span><b>10%</b><small>$87,344 de $900k</small></div></div></div>
+          <div class="panel pv-card"><h4>Lo que ve cada proveedor</h4>
+            <div class="ring" style="--p:10"><div><b>10%</b><small>de su objetivo</small></div></div>
+            <p class="pv-n">Galletera Valle</p>
+            <div class="mini-k"><span><b>$87,344</b>vendido</span><span><b>45</b>pedidos</span><span><b>31</b>clientes</span></div>
+            <p class="pv-h">Solo ve sus pedidos. Nunca los de otro proveedor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pn" id="pn-ven" role="tabpanel" aria-labelledby="tb-ven" hidden>
+        <div class="panel"><h4>Ranking de vendedores</h4><div class="vrs"><div class="vr"><span class="pos">1</span><span class="av2">AG</span><span class="nm">Ana Gómez<small>117 pedidos</small></span><span class="tr"><i style="width:100%"></i></span><b>$272,368</b></div><div class="vr"><span class="pos">2</span><span class="av2">CP</span><span class="nm">Carlos Pérez<small>88 pedidos</small></span><span class="tr"><i style="width:88%"></i></span><b>$240,977</b></div><div class="vr"><span class="pos">3</span><span class="av2">LM</span><span class="nm">Laura Méndez<small>68 pedidos</small></span><span class="tr"><i style="width:66%"></i></span><b>$180,701</b></div><div class="vr"><span class="pos">4</span><span class="av2">JR</span><span class="nm">Jorge Ramírez<small>75 pedidos</small></span><span class="tr"><i style="width:64%"></i></span><b>$173,809</b></div><div class="vr"><span class="pos">5</span><span class="av2">MC</span><span class="nm">Mostrador Centro<small>60 pedidos</small></span><span class="tr"><i style="width:62%"></i></span><b>$167,803</b></div><div class="vr"><span class="pos">6</span><span class="av2">FN</span><span class="nm">Foráneo Norte<small>12 pedidos</small></span><span class="tr"><i style="width:9%"></i></span><b>$25,259</b></div></div></div>
+      </div>
+      <div class="pn" id="pn-op" role="tabpanel" aria-labelledby="tb-op" hidden>
+        <div class="kpis">
+          <div class="kpi"><span>Impresos</span><b>333 <em>/ 420</em></b><div class="tr"><i style="width:79%"></i></div></div>
+          <div class="kpi"><span>Capturados en ERP</span><b>140 <em>/ 420</em></b><div class="tr"><i style="width:33%"></i></div></div>
+          <div class="kpi"><span>Contado / crédito</span><b>305 <em>/ 115</em></b><small>crédito a 21 días</small></div>
+          <div class="kpi"><span>Origen</span><b>327 <em>/ 93</em></b><small>stand / multimarcas</small></div>
+        </div>
+        <div class="panel"><h4>Últimos pedidos</h4>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Folio</th><th>Cliente</th><th>Proveedor</th><th class="n">Total</th><th>Estado</th></tr></thead><tbody>
+            <tr><td>EXPO-PV0101-42K</td><td>Depósito San José</td><td>Galletera Valle</td><td class="n">$1,444</td><td><span class="st s1">Por imprimir</span></td></tr>
+            <tr><td>EXPO-PV0106-763</td><td>Arturo Morales</td><td>Cruji</td><td class="n">$3,216</td><td><span class="st s2">Impreso</span></td></tr>
+            <tr><td>EXPO-PV0104-19A</td><td>Abarrotes La Luz</td><td>El Dorado</td><td class="n">$8,240</td><td><span class="st s3">En ERP</span></td></tr>
+            <tr><td>EXPO-PV0102-77C</td><td>Mini súper Lupita</td><td>Papelera Suave</td><td class="n">$2,108</td><td><span class="st s2">Impreso</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+    </div>
+    <p class="dash-note">Datos de ejemplo de la demo.</p>
+  </div>
+</section>
+<script>
+(function(){const tabs=[...document.querySelectorAll('.tabs [role=tab]')];
+function sel(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on})}
+tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];sel(n);n.focus()}})});})();
+</script>
 
 <section class="sec" id="funciones" style="padding-top:0">
   <div class="wrap">
