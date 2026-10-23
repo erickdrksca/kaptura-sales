@@ -7,21 +7,21 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%2282%22%20height%3D%2282%22%20rx%3D%2222%22%20fill%3D%22%23F97316%22/%3E%3Cpath%20d%3D%22M32%2030v44M32%2054l24-24M40%2047l18%2027%22%20stroke%3D%22%230F2A44%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20fill%3D%22none%22/%3E%3Ccircle%20cx%3D%2282%22%20cy%3D%2216%22%20r%3D%2212%22%20fill%3D%22%2314B8A6%22/%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Kaptura Sales · Pedidos para expos mayoristas</title>
-<link rel="canonical" href="https://kaptura-web.vercel.app/">
+<link rel="canonical" href="https://kaptura-sales.vercel.app/">
 <meta name="theme-color" content="#0F2A44">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Kaptura Sales">
 <meta property="og:title" content="Kaptura Sales · Cada pedido de tu expo, capturado">
 <meta property="og:description" content="Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.">
-<meta property="og:url" content="https://kaptura-web.vercel.app/">
-<meta property="og:image" content="https://kaptura-web.vercel.app/og.png">
+<meta property="og:url" content="https://kaptura-sales.vercel.app/">
+<meta property="og:image" content="https://kaptura-sales.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Kaptura Sales: pantalla de captura de pedidos en tablet">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="apple-touch-icon" href="/logo.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kaptura-web.vercel.app/#org", "name": "Kaptura Sales", "url": "https://kaptura-web.vercel.app/", "logo": "https://kaptura-web.vercel.app/logo.png"}, {"@type": "SoftwareApplication", "name": "Kaptura Sales", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iPadOS", "url": "https://kaptura-web.vercel.app/", "description": "Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.", "inLanguage": "es-MX", "publisher": {"@id": "https://kaptura-web.vercel.app/#org"}, "featureList": ["Captura de pedidos en tablet", "Promociones escalonadas, bonificaciones y regalos automáticos", "Funciona sin internet y sincroniza después", "Comprobante para el cliente", "Tableros de ventas en vivo", "Acceso por rol", "Exportación al ERP"]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kaptura-sales.vercel.app/#org", "name": "Kaptura Sales", "url": "https://kaptura-sales.vercel.app/", "logo": "https://kaptura-sales.vercel.app/logo.png"}, {"@type": "SoftwareApplication", "name": "Kaptura Sales", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iPadOS", "url": "https://kaptura-sales.vercel.app/", "description": "Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.", "inLanguage": "es-MX", "publisher": {"@id": "https://kaptura-sales.vercel.app/#org"}, "featureList": ["Captura de pedidos en tablet", "Promociones escalonadas, bonificaciones y regalos automáticos", "Funciona sin internet y sincroniza después", "Comprobante para el cliente", "Tableros de ventas en vivo", "Acceso por rol", "Exportación al ERP"]}]}</script>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -374,6 +374,24 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding
 footer p{margin:10px 0 0;max-width:34ch}
 @media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
 #tableros,#proceso{padding-top:96px!important}
+#pantallas{background:var(--bg)}
+#tableros{background:var(--bg2)}
+#funciones{background:var(--bg)}
+#proceso{background:var(--bg2);padding-bottom:96px}
+.nav nav a{white-space:nowrap}
+@media (max-width:1260px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+/* pantallas reales */
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.shot{display:flex;flex-direction:column;gap:14px;margin:0}
+.shot .frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.shot .fbar{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.shot .fbar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:1400/978;object-fit:cover;object-position:top}
+.shot figcaption{display:flex;flex-direction:column;gap:4px}
+.shot figcaption b{font:600 17px var(--body);color:var(--ink);letter-spacing:-.01em}
+.shot figcaption span{color:var(--mut);font-size:14.5px;max-width:52ch}
+@media (max-width:760px){.shots{grid-template-columns:1fr}}
+
 .story h2 em.k{color:inherit!important}
 .btn-acc{color:var(--acc-ink)}
 .btn{white-space:nowrap}
@@ -393,7 +411,7 @@ footer p{margin:10px 0 0;max-width:34ch}
       kaptura <span>sales</span>
     </a>
     <nav aria-label="Secciones">
-      <a href="#problema">El problema</a><a href="#beneficios">Beneficios</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+      <a href="#problema">El problema</a><a href="#beneficios">Beneficios</a><a href="#pantallas">Pantallas</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
     </nav>
     <a class="btn btn-acc" href="#contacto">Pide una demo</a>
   </div>
@@ -505,6 +523,22 @@ footer p{margin:10px 0 0;max-width:34ch}
           <li><b>Por proveedor</b>Objetivos y descuentos por marca</li>
         </ul>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pantallas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Pantallas reales</div>
+      <h2>Así se ve la plataforma.</h2>
+      <p>Capturas de la demo con datos de ejemplo. Es la misma plataforma que usan los proveedores y el equipo en la expo.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/captura.webp" alt="Pantalla de captura de pedido con historial del cliente, crédito y objetivo del proveedor" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Captura del pedido</b><span>Al elegir al cliente aparece su historial, su crédito disponible y el avance del proveedor contra su objetivo.</span></figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/catalogo.webp" alt="Catálogo de productos con precios de expo, descuentos y cantidades" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Catálogo con precio de expo</b><span>Cada producto muestra el precio de expo, el precio regular tachado y el descuento. Lo que va en el pedido se resalta.</span></figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/tablero.webp" alt="Tablero de ventas con objetivo, avance y tabla de vendedores" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Tablero de ventas</b><span>Dirección ve el objetivo general, lo vendido y el avance de cada vendedor en tiempo real.</span></figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/comprobante.webp" alt="Comprobante de pedido con folio, cliente, productos y total" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Comprobante del pedido</b><span>Folio, cliente, productos, precios y total. Se imprime, se guarda en PDF o se manda por WhatsApp.</span></figcaption></figure>
     </div>
   </div>
 </section>
