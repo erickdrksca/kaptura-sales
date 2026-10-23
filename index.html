@@ -399,6 +399,28 @@ footer p{margin:10px 0 0;max-width:34ch}
 @media (max-width:920px){.ticket{left:8px}}
 @media (max-width:480px){.nav .btn{padding:0 14px;font-size:13px}}
 
+
+/* reorganización */
+.ben5{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.ben5 .b{grid-column:span 2}
+.ben5 .b-lg{grid-column:span 3}
+.ben5 .b-lg h3{font-size:24px}
+.kpi-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
+.kpi-row span{display:flex;flex-direction:column;font-size:12.5px;color:var(--mut)}
+.kpi-row b{font:600 20px/1.2 var(--body);color:var(--ink);letter-spacing:-.02em}
+@media (max-width:960px){.ben5{grid-template-columns:1fr 1fr}.ben5 .b,.ben5 .b-lg{grid-column:span 1}.ben5 .b:last-child{grid-column:1/-1}}
+@media (max-width:600px){.ben5{grid-template-columns:1fr}.ben5 .b:last-child{grid-column:auto}}
+.shots3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.shots3 img{aspect-ratio:4/3!important;object-fit:cover;object-position:left top}
+.shot figcaption .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;background:var(--ink);color:var(--bg);font:600 12px var(--body);margin-bottom:4px}
+@media (max-width:900px){.shots3{grid-template-columns:1fr}}
+.hero-video{display:block;width:100%;border-radius:20px;border:1px solid var(--line);background:#0F2A44;aspect-ratio:16/10;object-fit:cover}
+#beneficios{background:var(--bg2);padding-top:96px!important}
+#funciona{background:var(--bg)}
+#tableros{background:var(--bg2);padding-top:96px!important}
+#proceso{background:var(--bg)!important}
+.story{background:var(--bg2)!important}
+.hero h1{font-size:clamp(40px,5.4vw,70px)!important;line-height:1.02!important}
 </style>
 </head>
 <body>
@@ -411,9 +433,9 @@ footer p{margin:10px 0 0;max-width:34ch}
       kaptura <span>sales</span>
     </a>
     <nav aria-label="Secciones">
-      <a href="#problema">El problema</a><a href="#beneficios">Beneficios</a><a href="#pantallas">Pantallas</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+      <a href="#beneficios">Beneficios</a><a href="#funciona">Así funciona</a><a href="#tableros">En vivo</a><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
     </nav>
-    <a class="btn btn-acc" href="#contacto">Pide una demo</a>
+    <a class="btn btn-acc" href="#contacto">Contáctanos</a>
   </div>
 </header>
 
@@ -421,15 +443,17 @@ footer p{margin:10px 0 0;max-width:34ch}
 <section class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Pedidos para expos mayoristas</div>
-      <h1>Cada pedido de tu expo, <em class="k">capturado.</em></h1>
-      <p class="lead">Tus vendedores levantan pedidos en tablet, con precios y promociones de expo ya calculados. Tú ves las ventas en vivo y al cerrar el evento tienes todo listo para tu sistema.</p>
+      <div class="eyebrow">Plataforma de pedidos para eventos comerciales</div>
+      <h1>La forma más dinámica de vender en tus <em class="k">eventos comerciales.</em></h1>
+      <p class="lead">Una plataforma amigable y personalizable que evita errores en cada pedido y te da visibilidad y transparencia con tus clientes y proveedores, en tiempo real.</p>
       <div class="ctas">
-        <a class="btn btn-acc" href="#contacto">Pide una demo</a>
+        <a class="btn btn-acc" href="#contacto">Contáctanos</a>
         <a class="btn btn-line" href="/demo/" target="_blank" rel="noopener">Prueba la demo en línea ↗</a>
       </div>
     </div>
-    <div style="position:relative;padding-bottom:30px">
+    <div class="hero-media" style="position:relative;padding-bottom:30px">
+      <!-- VIDEO: cuando esté listo, reemplazar la tablet por:
+      <video class="hero-video" src="/video/kaptura.mp4" poster="/img/captura.webp" autoplay muted loop playsinline aria-label="Kaptura Sales en acción"></video> -->
       <div class="tablet" role="img" aria-label="Pantalla de captura de pedidos en tablet">
         <div class="screen">
           <div class="s-top">kaptura sales · Galletera Valle <i>$87,344 hoy</i></div>
@@ -459,96 +483,73 @@ footer p{margin:10px 0 0;max-width:34ch}
 </section>
 
 
-<section class="sec" id="problema">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">El problema</div>
-      <h2>Del papel al tablero en <em class="k">segundos.</em></h2>
-      <p>En una expo se venden en tres días lo que en semanas. Si los pedidos viven en hojas, el trabajo de verdad empieza cuando el evento termina.</p>
-    </div>
-    <div class="vs">
-      <div class="vs-col vs-before">
-        <h3>Sin Kaptura</h3>
-        <ul>
-          <li><span class="mk">×</span>Pedidos en papel o en Excel que alguien vuelve a capturar, con letra que no se entiende.</li>
-          <li><span class="mk">×</span>Filas de clientes esperando mientras el vendedor busca precios en hojas.</li>
-          <li><span class="mk">×</span>Promociones y bonificaciones calculadas a mano, que se olvidan o se aplican mal.</li>
-          <li><span class="mk">×</span>El internet del recinto se cae y la venta se detiene.</li>
-          <li><span class="mk">×</span>El cliente se va sin comprobante de lo que pidió.</li>
-          <li><span class="mk">×</span>Nadie sabe cuánto se lleva vendido hasta el final, y conciliar toma semanas.</li>
-        </ul>
-      </div>
-      <div class="vs-col vs-after">
-        <h3>Con Kaptura</h3>
-        <ul>
-          <li><span class="mk">✓</span><span><b>Captura directa en tablet</b>, una sola vez, sin papel.</span></li>
-          <li><span class="mk">✓</span><span><b>Catálogo y cliente a un toque</b>, con el precio de expo ya puesto.</span></li>
-          <li><span class="mk">✓</span><span><b>Promociones automáticas</b>: escalonadas, bonificaciones y regalos se aplican solas.</span></li>
-          <li><span class="mk">✓</span><span><b>Sigue funcionando sin internet</b> y sincroniza cuando regresa la señal.</span></li>
-          <li><span class="mk">✓</span><span><b>Comprobante por WhatsApp</b> en cuanto se guarda el pedido.</span></li>
-          <li><span class="mk">✓</span><span><b>Ventas en vivo</b> y archivo listo para tu ERP el día del cierre.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="sec" id="beneficios" style="padding-top:0">
+<section class="sec" id="beneficios">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Beneficios</div>
-      <h2>Pensada para lo que <em class="k">sí pasa</em> en una expo.</h2>
+      <h2>Pensada para lo que sí pasa en una expo.</h2>
     </div>
-    <div class="ben">
-      <article class="b b-dark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/><path d="M3 3l18 18"/></svg>
-        <h3>Se va el internet, sigues vendiendo</h3>
-        <p>Los pedidos se guardan en la tablet y se envían solos cuando regresa la señal. Ningún pedido se pierde por la red del recinto.</p>
-        <div class="chip-row"><span class="chip off">Sin conexión · 3 pedidos en espera</span><span class="chip on">✓ Sincronizados</span></div>
+    <div class="ben5">
+      <article class="b b-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+        <h3>Vende más rápido</h3>
+        <p>El vendedor elige al cliente, toca los productos y guarda. Precios de expo, descuentos y crédito ya vienen calculados, sin hojas ni calculadora.</p>
+        <div class="kpi-row"><span><b>1 toque</b>por producto</span><span><b>0</b>capturas dobles</span><span><b>Al instante</b>en el sistema</span></div>
       </article>
-      <article class="b">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.4-4.4A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 11.5l2 2 4-4"/></svg>
-        <h3>Comprobante por WhatsApp</h3>
-        <p>Al guardar el pedido, el cliente recibe su comprobante en WhatsApp con el detalle, el total y un enlace para consultarlo.</p>
-        <div class="wa"><b>Kaptura Sales</b>Hola, Depósito San José. Tu pedido EXPO-PV0101-42K por $1,444.00 quedó registrado. Consulta el detalle aquí ↗<small>10:42 ✓✓</small></div>
-      </article>
-      <article class="b">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 13.5l-7 7a2 2 0 0 1-2.8 0L3 12.8V3h9.8l7.7 7.7a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
-        <h3>Todas tus promociones, cargadas de una vez</h3>
-        <p>Subes el Excel de compras y la plataforma aplica cada promo sin que el vendedor haga cuentas.</p>
+      <article class="b b-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.5l-7 7a2 2 0 0 1-2.8 0L3 12.8V3h9.8l7.7 7.7a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+        <h3>Todas las promociones que quieras</h3>
+        <p>Cargas el Excel de compras y la plataforma aplica cada dinámica sin que el vendedor haga cuentas.</p>
         <ul class="promo">
-          <li><b>Escalonada</b>10 a 29 cajas a $280, 30 o más a $270</li>
-          <li><b>Bonificación</b>Por cada 5 kg, 1 kg sin cargo</li>
-          <li><b>Regalo por monto</b>En compras de $200, un producto gratis a elegir</li>
-          <li><b>Por proveedor</b>Objetivos y descuentos por marca</li>
+          <li><b>Escalonadas</b>10 a 29 cajas a $280, 30 o más a $270</li>
+          <li><b>Bonificaciones</b>Por cada 5 kg, 1 kg sin cargo</li>
+          <li><b>Tarimas y regalos</b>Producto gratis a elegir al llegar a un monto</li>
         </ul>
+      </article>
+      <article class="b">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg>
+        <h3>Visibilidad en tiempo real</h3>
+        <p>Ventas, pedidos y avance contra objetivo por proveedor y vendedor, actualizados mientras se vende.</p>
+      </article>
+      <article class="b">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Transparencia con clientes y proveedores</h3>
+        <p>Cada proveedor ve sus pedidos y su avance. Cada cliente recibe su comprobante con folio y precios, y se lo pueden compartir por WhatsApp en un toque.</p>
+      </article>
+      <article class="b">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 2 20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.8a15 15 0 0 1 4.2-2.7"/><path d="M10.7 5.1A15 15 0 0 1 22 8.8"/><path d="M16.9 11.4a10 10 0 0 1 2.2 1.5"/><path d="M5 12.9a10 10 0 0 1 5.2-2.8"/><path d="M12 20h.01"/></svg>
+        <h3>Si se va la señal, tus ventas están seguras</h3>
+        <p>Los pedidos se guardan en la tablet y se envían solos cuando regresa el internet.</p>
+        <div class="chip-row"><span class="chip off">Sin conexión · 3 en espera</span><span class="chip on">✓ Sincronizados</span></div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="pantallas">
+
+<section class="sec" id="funciona">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Pantallas reales</div>
-      <h2>Así se ve la plataforma.</h2>
-      <p>Capturas de la demo con datos de ejemplo. Es la misma plataforma que usan los proveedores y el equipo en la expo.</p>
+      <div class="eyebrow">Así funciona Kaptura</div>
+      <h2>Del stand al sistema, en tres pantallas.</h2>
+      <p>Capturas reales de la plataforma con datos de ejemplo.</p>
     </div>
-    <div class="shots">
-      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/captura.webp" alt="Pantalla de captura de pedido con historial del cliente, crédito y objetivo del proveedor" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Captura del pedido</b><span>Al elegir al cliente aparece su historial, su crédito disponible y el avance del proveedor contra su objetivo.</span></figcaption></figure>
-      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/catalogo.webp" alt="Catálogo de productos con precios de expo, descuentos y cantidades" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Catálogo con precio de expo</b><span>Cada producto muestra el precio de expo, el precio regular tachado y el descuento. Lo que va en el pedido se resalta.</span></figcaption></figure>
-      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/tablero.webp" alt="Panel de pedidos con menú lateral, estados y totales" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Panel de pedidos</b><span>Compras y dirección ven cada pedido con su estado, filtran por proveedor o cliente y exportan a su ERP.</span></figcaption></figure>
-      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/comprobante.webp" alt="Comprobante de pedido con folio, cliente, productos y total" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><b>Comprobante del pedido</b><span>Folio, cliente, productos, precios y total. Se imprime, se guarda en PDF o se manda por WhatsApp.</span></figcaption></figure>
+    <div class="shots3">
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/captura.webp" alt="Pantalla de captura de pedido con datos del cliente, crédito y resumen" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><span class="n">1</span><b>Captura de pedidos</b><span>El vendedor elige al cliente y ve su historial, crédito disponible y forma de pago antes de vender.</span></figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/catalogo.webp" alt="Catálogo con precios de expo, descuentos y productos en el pedido" width="1400" height="978" loading="lazy" decoding="async"></div><figcaption><span class="n">2</span><b>Promociones y tarimas</b><span>Cada producto muestra su precio de expo y descuento. Escalonadas, bonificaciones y tarimas se aplican solas.</span></figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="fbar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/img/proveedor.webp" alt="Tablero del proveedor con objetivo, capturado y faltante" width="1400" height="1057" loading="lazy" decoding="async"></div><figcaption><span class="n">3</span><b>Tablero del proveedor</b><span>Cada proveedor ve en vivo su objetivo, lo capturado y lo que le falta para llegar.</span></figcaption></figure>
     </div>
   </div>
 </section>
+
 
 <section class="sec" id="tableros" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Tableros</div>
-      <h2>Ves tu expo <em class="k">en vivo.</em></h2>
-      <p>Cada área tiene su propio tablero, actualizado mientras se vende. Dirección ve el total, cada proveedor ve lo suyo y operación sabe qué falta imprimir o enviar al ERP.</p>
+      <div class="eyebrow">Para el organizador</div>
+      <h2>Controla tu expo en vivo.</h2>
+      <p>El organizador ve el avance de ventas, pedidos, descuentos y vendedores en un solo lugar, mientras pasa la expo.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="Tableros">
       <button role="tab" id="tb-dir" aria-selected="true" aria-controls="pn-dir">Dirección</button>
@@ -610,22 +611,6 @@ function sel(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',o
 tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];sel(n);n.focus()}})});})();
 </script>
 
-<section class="sec" id="funciones" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Funciones</div>
-      <h2>Todo lo que pasa en tu expo, <em class="k">en un solo lugar.</em></h2>
-    </div>
-    <div class="feat">
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg><h3>Captura en tablet</h3><p>Pantallas grandes y claras para vender de pie, con buscador, carrito y confirmación antes de guardar.</p></div>
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><h3>Carga desde Excel</h3><p>Catálogo, clientes, vendedores y promociones se suben desde archivo, sin capturar uno por uno.</p></div>
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 16v-5M11 16V6M16 16v-8M21 16v-3"/></svg><h3>Tableros en vivo</h3><p>Avance contra objetivo por proveedor, ranking de vendedores y clientes, actualizados cada minuto.</p></div>
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h12v19l-3-2-3 2-3-2-3 2z"/><path d="M9 12l2 2 4-4"/></svg><h3>Bitácora de cambios</h3><p>Cada cancelación o ajuste queda registrado con quién y cuándo lo hizo.</p></div>
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10v-6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Acceso por rol</h3><p>Cada proveedor ve solo sus pedidos. Vendedores, compras, impresión y dirección, cada quien con lo suyo.</p></div>
-      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19.5h16"/></svg><h3>Exportación al ERP</h3><p>Pedidos listos para cargar a Business Central u otro sistema, sin volver a capturar.</p></div>
-    </div>
-  </div>
-</section>
 
 <section class="sec" id="proceso" style="padding-top:0">
   <div class="wrap">
@@ -652,7 +637,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
     </div>
     <div>
       <p>Kaptura Sales surgió recorriendo expos de mayoristas. En todas se repetía lo mismo: pedidos en papel, filas para capturar, promociones que se olvidaban, internet que se caía a media venta y semanas de conciliación al terminar.</p>
-      <p>Las expos de los grandes mayoristas tienen equipos enteros para resolverlo. Las empresas medianas no. Por eso se construyó primero para la expo de una distribuidora mediana, se probó con miles de pedidos reales y ahora está lista para cualquier mayorista o distribuidor que quiera vender más en su evento.</p>
+      <p>Por eso se construyó para brindar una mejor experiencia a los usuarios y retailers. Se probó con miles de pedidos reales y ahora está lista para cualquier mayorista o distribuidor que quiera vender más en sus eventos.</p>
       <blockquote>Que el vendedor solo se preocupe por vender.</blockquote>
     </div>
   </div>
@@ -722,7 +707,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
 <footer>
   <div class="wrap">
     <div><span class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="4" y="10" width="82" height="82" rx="22" fill="#F97316"/><path d="M32 30v44M32 54l24-24M40 47l18 27" stroke="#0F2A44" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="82" cy="16" r="12" fill="#14B8A6"/></svg>kaptura <span>sales</span></span><p>Plataforma de pedidos para expos y ventas mayoristas.</p></div>
-    <div class="fcol"><b>Plataforma</b><a href="#beneficios">Beneficios</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="/demo/" target="_blank" rel="noopener">Probar la demo</a></div>
+    <div class="fcol"><b>Plataforma</b><a href="#beneficios">Beneficios</a><a href="#funciona">Así funciona</a><a href="#tableros">En vivo</a><a href="/demo/" target="_blank" rel="noopener">Probar la demo</a></div>
     <div class="fcol"><b>Empresa</b><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a></div>
     <div class="legal"><span>© 2026 Kaptura Sales</span><span>Hecho en México</span></div>
   </div>
