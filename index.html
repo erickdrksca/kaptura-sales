@@ -6,7 +6,24 @@
 <meta name="description" content="Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%2282%22%20height%3D%2282%22%20rx%3D%2222%22%20fill%3D%22%23F97316%22/%3E%3Cpath%20d%3D%22M32%2030v44M32%2054l24-24M40%2047l18%2027%22%20stroke%3D%22%230F2A44%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20fill%3D%22none%22/%3E%3Ccircle%20cx%3D%2282%22%20cy%3D%2216%22%20r%3D%2212%22%20fill%3D%22%2314B8A6%22/%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Kaptura Sales</title>
+<title>Kaptura Sales · Pedidos para expos mayoristas</title>
+<link rel="canonical" href="https://kaptura-web.vercel.app/">
+<meta name="theme-color" content="#0F2A44">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Kaptura Sales">
+<meta property="og:title" content="Kaptura Sales · Cada pedido de tu expo, capturado">
+<meta property="og:description" content="Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.">
+<meta property="og:url" content="https://kaptura-web.vercel.app/">
+<meta property="og:image" content="https://kaptura-web.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kaptura Sales: pantalla de captura de pedidos en tablet">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="/logo.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kaptura-web.vercel.app/#org", "name": "Kaptura Sales", "url": "https://kaptura-web.vercel.app/", "logo": "https://kaptura-web.vercel.app/logo.png"}, {"@type": "SoftwareApplication", "name": "Kaptura Sales", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iPadOS", "url": "https://kaptura-web.vercel.app/", "description": "Plataforma de pedidos para expos mayoristas: captura en tablet, promociones automáticas, funciona sin internet y ventas en vivo.", "inLanguage": "es-MX", "publisher": {"@id": "https://kaptura-web.vercel.app/#org"}, "featureList": ["Captura de pedidos en tablet", "Promociones escalonadas, bonificaciones y regalos automáticos", "Funciona sin internet y sincroniza después", "Comprobante para el cliente", "Tableros de ventas en vivo", "Acceso por rol", "Exportación al ERP"]}]}</script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
@@ -14,15 +31,15 @@
 /* Layout: página editorial de una columna; cada sección abre con etiqueta + título grande con una palabra en cursiva naranja */
 :root{
   --bg:#FFFFFF; --bg2:#F3F6F9; --ink:#0F2A44; --fg:#1B2A3A; --mut:#5A6B7D; --line:#E2E8EF;
-  --acc:#EA580C; --acc-ink:#FFFFFF; --acc-soft:#FFF1E6; --teal:#0F9F8F; --card:#FFFFFF; --navy:#0F2A44; --on-navy:#FFFFFF; --on-navy-mut:#B9C7D6;
+  --acc:#EA580C; --acc-strong:#C2410C; --teal-text:#0B7A6E; --acc-ink:#FFFFFF; --acc-soft:#FFF1E6; --teal:#0F9F8F; --card:#FFFFFF; --navy:#0F2A44; --on-navy:#FFFFFF; --on-navy-mut:#B9C7D6;
   --display:'Fraunces',Georgia,'Times New Roman',serif; --serif:'Fraunces',Georgia,serif; --body:'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif; --brand:'Poppins',ui-sans-serif,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0A1A2B; --bg2:#0F2236; --ink:#F2F6FA; --fg:#DCE5EE; --mut:#93A5B8; --line:#1F3650;
-  --acc:#FB8A3C; --acc-ink:#0A1A2B; --acc-soft:#2A2117; --teal:#2DD4BF; --card:#112740; --navy:#06111D; --on-navy:#FFFFFF; --on-navy-mut:#93A5B8; color-scheme:dark}}
+  --acc:#FB8A3C; --acc-strong:#FB8A3C; --teal-text:#2DD4BF; --acc-ink:#0A1A2B; --acc-soft:#2A2117; --teal:#2DD4BF; --card:#112740; --navy:#06111D; --on-navy:#FFFFFF; --on-navy-mut:#93A5B8; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0A1A2B; --bg2:#0F2236; --ink:#F2F6FA; --fg:#DCE5EE; --mut:#93A5B8; --line:#1F3650;
-  --acc:#FB8A3C; --acc-ink:#0A1A2B; --acc-soft:#2A2117; --teal:#2DD4BF; --card:#112740; --navy:#06111D; --on-navy:#FFFFFF; --on-navy-mut:#93A5B8; color-scheme:dark}
+  --acc:#FB8A3C; --acc-strong:#FB8A3C; --teal-text:#2DD4BF; --acc-ink:#0A1A2B; --acc-soft:#2A2117; --teal:#2DD4BF; --card:#112740; --navy:#06111D; --on-navy:#FFFFFF; --on-navy-mut:#93A5B8; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -32,7 +49,7 @@ a{color:inherit}
 h1,h2{font-family:var(--display);font-optical-sizing:auto;color:var(--ink);text-wrap:balance;margin:0;letter-spacing:-.025em;font-weight:400}
 h3{font-family:var(--body);color:var(--ink);text-wrap:balance;margin:0;letter-spacing:-.01em;font-weight:600}
 em.k{font-family:var(--serif);font-style:italic;font-weight:350;color:var(--acc);letter-spacing:-.02em}
-.eyebrow{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:10px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--acc-strong);display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
 .sec{padding-block:96px}
 .sec-head{display:flex;flex-direction:column;gap:16px;max-width:720px;margin-bottom:48px}
@@ -41,7 +58,7 @@ em.k{font-family:var(--serif);font-style:italic;font-weight:350;color:var(--acc)
 .btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font:600 15px var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.btn-acc{background:var(--acc);color:var(--acc-ink)}
+.btn-acc{background:var(--acc-strong);color:var(--acc-ink)}
 .btn-line{border-color:var(--line);color:var(--ink);background:transparent}
 
 /* nav */
@@ -129,6 +146,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .promo li b{color:var(--ink);font-size:13px}
 @media (max-width:960px){.ben{grid-template-columns:1fr}}
 
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
 /* tableros */
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
 .tabs button{height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);font:600 14px var(--body);cursor:pointer}
@@ -137,7 +155,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .dash-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--card);font-size:12.5px}
 .dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
 .url{color:var(--mut);background:var(--bg2);padding:4px 12px;border-radius:999px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.live{margin-left:auto;color:var(--teal);font-weight:600;white-space:nowrap}
+.live{margin-left:auto;color:var(--teal-text);font-weight:600;white-space:nowrap}
 .pn{padding:18px;display:flex;flex-direction:column;gap:14px}
 .pn[hidden]{display:none}
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -200,7 +218,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .step .n{font:300 48px/1 var(--serif);font-style:italic;color:var(--acc)}
 .step h3{font-size:17px;font-weight:600}
 .step p{margin:0;font-size:14.5px;color:var(--mut)}
-.step .when{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.step .when{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-text)}
 @media (max-width:980px){.steps{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.steps{grid-template-columns:1fr}}
 
@@ -236,7 +254,7 @@ textarea{min-height:110px;resize:vertical}
 .rate button{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--mut);font-size:18px;cursor:pointer}
 .rate button.on{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
 .msg{font-size:14px;margin:0;min-height:1.2em}
-.msg.ok{color:var(--teal)} .msg.err{color:#D9480F}
+.msg.ok{color:var(--teal-text)} .msg.err{color:#D9480F}
 @media (max-width:900px){.op-grid{grid-template-columns:1fr}.form{position:static}}
 @media (max-width:480px){.row2{grid-template-columns:1fr}}
 
@@ -262,6 +280,107 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 footer .brand{font-size:16px} footer .brand svg{width:26px;height:26px}
 footer .r{margin-left:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.btn:hover{transition:none;transform:none}}
+
+/* ===== Estilo Brex + franja Ramp ===== */
+:root{
+  --bg:#FFFFFF; --bg2:#F3F4F7; --ink:#0F2A44; --fg:#1B2430; --mut:#5B6270; --line:#E3E5EA; --mist:#C9CCD5;
+  --acc:#EA580C; --acc-strong:#C2410C; --acc-soft:#FFF1E6; --card:#FFFFFF; --band:#0B1626; --abyss:#000710; --on-dark:#FFFFFF; --on-dark-mut:#9AA3B2;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --bg2:#111A2B; --ink:#F2F5F9; --fg:#D9E0E8; --mut:#9AA6B6; --line:#1F2A3D; --mist:#33415A;
+  --acc:#FB8A3C; --acc-strong:#F97316; --acc-soft:#2A1D12; --card:#0F1828; --band:#060B14; --abyss:#03060C; --on-dark:#FFFFFF; --on-dark-mut:#8592A6; --acc-ink:#0B1220; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --bg2:#111A2B; --ink:#F2F5F9; --fg:#D9E0E8; --mut:#9AA6B6; --line:#1F2A3D; --mist:#33415A;
+  --acc:#FB8A3C; --acc-strong:#F97316; --acc-soft:#2A1D12; --card:#0F1828; --band:#060B14; --abyss:#03060C; --on-dark:#FFFFFF; --on-dark-mut:#8592A6; --acc-ink:#0B1220; color-scheme:dark}
+body{font-family:var(--body);letter-spacing:-.01em;color:var(--fg)}
+h1,h2{font-family:var(--body);font-weight:600;letter-spacing:-.03em;color:var(--ink)}
+.sec-head h2{font-size:clamp(32px,4.4vw,48px);line-height:1.12;font-weight:600;letter-spacing:-.03em}
+.sec-head p{color:var(--mut);font-size:18px}
+em.k{font:inherit;font-style:normal;color:inherit;letter-spacing:inherit}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,6.6vw,84px);line-height:1;letter-spacing:-.035em}
+.hero h1 em.k{font-family:var(--display);font-style:italic;font-weight:350;color:var(--acc-strong)}
+.hero{background:var(--bg)}
+.eyebrow{color:var(--mut);font:600 12px/1 var(--body);letter-spacing:.08em}
+.eyebrow::before{display:none}
+.btn{border-radius:12px;height:48px;font-weight:600;letter-spacing:-.01em}
+.btn:hover{transform:none}
+.btn-acc{background:var(--acc-strong);color:#fff}
+.btn-acc:hover{filter:brightness(1.08)}
+.btn-line{border:1px solid var(--mist);color:var(--ink)}
+.btn-line:hover{background:var(--bg2)}
+.btn[aria-busy="true"]{opacity:.7;cursor:progress}
+header.nav{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+.nav .btn{height:40px}
+.brand span{color:var(--acc)}
+/* superficies planas: sin sombras, radio 12 */
+.tablet{box-shadow:none;transform:none;border-radius:20px}
+.ticket{box-shadow:none;transform:none;border-radius:12px;border:1px solid var(--line)}
+.dash{box-shadow:none;border-radius:12px}
+.panel,.kpi{border-radius:12px}
+.vs-col,.b,.op,.form,.empty{border-radius:12px}
+input,textarea,select{border-radius:12px;border-color:var(--mist);background:var(--card)}
+.rate button{border-radius:10px}
+.tabs button{border-radius:12px}
+.st,.chip,.tag{border-radius:6px}
+/* problema: ambas columnas claras */
+.vs-before{background:var(--bg2)}
+.vs-after{background:var(--card);border:1px solid var(--line);color:var(--fg)}
+.vs-after h3{color:var(--ink)}
+.vs-after li{color:var(--mut)} .vs-after li b{color:var(--ink)}
+.vs-after .mk{background:var(--acc-strong);color:#fff}
+.vs-col h3{font:600 22px/1.2 var(--body);letter-spacing:-.02em}
+/* beneficios */
+.b h3{font:600 22px/1.2 var(--body);letter-spacing:-.02em}
+.b-dark{background:var(--card);border:1px solid var(--line)}
+.b-dark h3{color:var(--ink)} .b-dark p{color:var(--mut)} .b-dark svg{color:var(--acc)}
+.chip.off{background:var(--bg2);color:var(--acc-strong);border:1px dashed var(--acc)}
+.chip.on{background:color-mix(in srgb,var(--teal) 18%,transparent);color:var(--teal-text)}
+.f h3,.step h3{font-weight:600}
+.step .n{font:600 14px/1 var(--body);font-style:normal;color:var(--acc-strong);letter-spacing:.04em}
+.step:first-child{border-top-color:var(--ink)}
+.step{border-top-width:1px}
+/* bandas alternas */
+#beneficios,#funciones{background:var(--bg2);padding-top:96px!important}
+#beneficios .b{background:var(--card)}
+.story{background:var(--bg);color:var(--fg)}
+.story h2{color:var(--ink);font-family:var(--body);font-weight:600;font-size:clamp(32px,4.4vw,48px);line-height:1.12}
+.story .eyebrow{color:var(--mut)}
+.story p{color:var(--mut)}
+.story blockquote{color:var(--ink);border-left-color:var(--acc-strong);font-family:var(--display)}
+.story h2 em.k{color:inherit}
+.form h3,.empty b,.ring b,.pv-n,.kpi b{font-family:var(--body);font-weight:600;letter-spacing:-.02em}
+.form h3{font-size:22px}
+.contact .big{font-family:var(--body);font-weight:600;letter-spacing:-.035em;font-size:clamp(36px,5vw,60px);line-height:1.05}
+.stars{color:var(--acc)}
+/* franja en vivo (Ramp) */
+.band{background:var(--band);color:var(--on-dark)}
+.band .wrap{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:0;align-items:stretch;padding-block:26px}
+.band .lbl{display:flex;align-items:center;gap:10px;padding-right:28px;font:600 11px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-mut);max-width:200px}
+.band .dot{width:8px;height:8px;border-radius:50%;background:#34D399;flex-shrink:0;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.band .m{display:flex;flex-direction:column;gap:4px;padding:0 24px;border-left:1px solid rgba(255,255,255,.12)}
+.band .m span{font:600 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-mut)}
+.band .m b{font:500 clamp(24px,2.6vw,34px)/1.1 var(--body);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--on-dark)}
+@media (max-width:900px){.band .wrap{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.band .lbl{grid-column:1/-1;max-width:none}.band .m{padding:0 16px 0 0;border-left:0}}
+@media (prefers-reduced-motion:reduce){.band .dot{animation:none}}
+/* pie oscuro */
+footer{background:var(--abyss);color:var(--on-dark-mut);border-top:0;padding-block:56px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;align-items:start}
+footer .brand{color:#fff;font-size:18px}
+footer .fcol{display:flex;flex-direction:column;gap:10px;font-size:14px}
+footer .fcol b{color:#fff;font-weight:600}
+footer a{color:var(--on-dark-mut);text-decoration:none} footer a:hover{color:#fff}
+footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer p{margin:10px 0 0;max-width:34ch}
+@media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
+#tableros,#proceso{padding-top:96px!important}
+.story h2 em.k{color:inherit!important}
+.btn-acc{color:var(--acc-ink)}
+.btn{white-space:nowrap}
+.ticket{right:auto;left:-20px;bottom:-30px}
+@media (max-width:920px){.ticket{left:8px}}
+@media (max-width:480px){.nav .btn{padding:0 14px;font-size:13px}}
+
 </style>
 </head>
 <body>
@@ -289,14 +408,8 @@ footer .r{margin-left:auto}
       <p class="lead">Tus vendedores levantan pedidos en tablet, con precios y promociones de expo ya calculados. Tú ves las ventas en vivo y al cerrar el evento tienes todo listo para tu sistema.</p>
       <div class="ctas">
         <a class="btn btn-acc" href="#contacto">Pide una demo</a>
-        <a class="btn btn-line" href="https://claude.ai/artifact/56awsdDofQ8ZisVZibZdhK" target="_blank" rel="noopener">Prueba la demo en línea ↗</a>
+        <a class="btn btn-line" href="/demo/" target="_blank" rel="noopener">Prueba la demo en línea ↗</a>
       </div>
-      <div class="stats">
-        <div class="stat"><b>3,599</b><span>pedidos capturados</span></div>
-        <div class="stat"><b>16,338</b><span>renglones de producto</span></div>
-        <div class="stat"><b>234</b><span>proveedores en catálogo</span></div>
-      </div>
-      <p class="stats-note">Cifras de su primera expo en operación, con un mayorista del sureste de México.</p>
     </div>
     <div style="position:relative;padding-bottom:30px">
       <div class="tablet" role="img" aria-label="Pantalla de captura de pedidos en tablet">
@@ -316,6 +429,17 @@ footer .r{margin-left:auto}
     </div>
   </div>
 </section>
+
+<section class="band" aria-label="Cifras de operación">
+  <div class="wrap">
+    <div class="lbl"><span class="dot" aria-hidden="true"></span>Primera expo en operación</div>
+    <div class="m"><span>Pedidos capturados</span><b>3,599</b></div>
+    <div class="m"><span>Renglones de producto</span><b>16,338</b></div>
+    <div class="m"><span>Proveedores en catálogo</span><b>234</b></div>
+    <div class="m"><span>Productos</span><b>2,643</b></div>
+  </div>
+</section>
+
 
 <section class="sec" id="problema">
   <div class="wrap">
@@ -512,6 +636,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
         <div class="empty" id="opEmpty"><b>Aún no hay opiniones publicadas</b>Si usaste Kaptura Sales en una expo, sé el primero en contarnos cómo te fue con el formulario.</div>
       </div>
       <form class="form" id="opForm" novalidate>
+        <div class="hp" aria-hidden="true"><label for="opWeb">Sitio web</label><input id="opWeb" tabindex="-1" autocomplete="off"></div>
         <h3>Deja tu opinión</h3>
         <p class="h">¿Usaste la plataforma como proveedor, vendedor o cliente? Cuéntanos.</p>
         <div class="row2">
@@ -542,6 +667,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
       </ul>
     </div>
     <form class="form" id="ctForm" novalidate style="background:var(--card);border:1px solid var(--line);position:static">
+      <div class="hp" aria-hidden="true"><label for="ctWeb">Sitio web</label><input id="ctWeb" tabindex="-1" autocomplete="off"></div>
       <h3>Pide una demo</h3>
       <div class="row2">
         <label class="fld" for="ctNombre">Nombre<input id="ctNombre" maxlength="60" autocomplete="name"></label>
@@ -561,9 +687,10 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
 
 <footer>
   <div class="wrap">
-    <span class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="4" y="10" width="82" height="82" rx="22" fill="#F97316"/><path d="M32 30v44M32 54l24-24M40 47l18 27" stroke="#0F2A44" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="82" cy="16" r="12" fill="#14B8A6"/></svg>kaptura <span>sales</span></span>
-    <span>Plataforma de pedidos para expos y ventas mayoristas.</span>
-    <span class="r">© 2026 Kaptura Sales</span>
+    <div><span class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="4" y="10" width="82" height="82" rx="22" fill="#F97316"/><path d="M32 30v44M32 54l24-24M40 47l18 27" stroke="#0F2A44" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="82" cy="16" r="12" fill="#14B8A6"/></svg>kaptura <span>sales</span></span><p>Plataforma de pedidos para expos y ventas mayoristas.</p></div>
+    <div class="fcol"><b>Plataforma</b><a href="#beneficios">Beneficios</a><a href="#tableros">Tableros</a><a href="#funciones">Funciones</a><a href="/demo/" target="_blank" rel="noopener">Probar la demo</a></div>
+    <div class="fcol"><b>Empresa</b><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a></div>
+    <div class="legal"><span>© 2026 Kaptura Sales</span><span>Hecho en México</span></div>
   </div>
 </footer>
 
@@ -572,6 +699,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
   const SB="https://sdghvgugrzpszimnsbbp.supabase.co", KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNkZ2h2Z3Vncnpwc3ppbW5zYmJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI2NzgyNDgsImV4cCI6MjEwODI1NDI0OH0.QbYzU8gHqV75XAhdruTvlngImtk7ICw8V0e7I1k_Ykk";
   const rpc=(fn,args)=>fetch(SB+"/rest/v1/rpc/"+fn,{method:"POST",headers:{"apikey":KEY,"Authorization":"Bearer "+KEY,"Content-Type":"application/json"},body:JSON.stringify(args||{})}).then(async r=>{if(!r.ok)throw new Error(await r.text());const t=await r.text();return t?JSON.parse(t):null});
   const $=id=>document.getElementById(id);
+  const T0=Date.now(); const bot=w=>$(w).value!==''||Date.now()-T0<3000;
   let rating=5;
   const rate=$('opRate');
   for(let i=1;i<=5;i++){const b=document.createElement('button');b.type='button';b.textContent='★';b.setAttribute('role','radio');b.setAttribute('aria-label',i+' estrellas');b.onclick=()=>{rating=i;paint()};rate.appendChild(b)}
@@ -593,19 +721,21 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
     e.preventDefault();
     const n=$('opNombre').value.trim(),tx=$('opTexto').value.trim();
     if(n.length<2||tx.length<10){msg($('opMsg'),'Escribe tu nombre y una opinión de al menos 10 letras.',false);return}
-    const btn=e.submitter;if(btn)btn.disabled=true;
+    if(bot('opWeb')){msg($('opMsg'),'¡Gracias! Tu opinión se publicará después de revisarla.',true);return}
+    const btn=e.submitter;if(btn){btn.disabled=true;btn.setAttribute('aria-busy','true');btn.dataset.t=btn.textContent;btn.textContent='Enviando…'}
     try{await rpc('web_enviar_opinion',{p_nombre:n,p_empresa:$('opEmpresa').value,p_rol:$('opRol').value,p_calificacion:rating,p_texto:tx});msg($('opMsg'),'¡Gracias! Tu opinión se publicará después de revisarla.',true);e.target.reset();rating=5;paint()}
     catch(err){msg($('opMsg'),'No se pudo enviar. Intenta de nuevo en un momento.',false)}
-    finally{if(btn)btn.disabled=false}
+    finally{if(btn){btn.disabled=false;btn.removeAttribute('aria-busy');btn.textContent=btn.dataset.t}}
   });
   $('ctForm').addEventListener('submit',async e=>{
     e.preventDefault();
     const n=$('ctNombre').value.trim(),tel=$('ctTel').value.trim();
     if(n.length<2||tel.replace(/\D/g,'').length<7){msg($('ctMsg'),'Escribe tu nombre y un teléfono de al menos 7 dígitos.',false);return}
-    const btn=e.submitter;if(btn)btn.disabled=true;
+    if(bot('ctWeb')){msg($('ctMsg'),'Listo, recibimos tu solicitud. Te escribimos pronto.',true);return}
+    const btn=e.submitter;if(btn){btn.disabled=true;btn.setAttribute('aria-busy','true');btn.dataset.t=btn.textContent;btn.textContent='Enviando…'}
     try{await rpc('web_enviar_contacto',{p_nombre:n,p_empresa:$('ctEmpresa').value,p_telefono:tel,p_fecha:$('ctFecha').value,p_nota:$('ctNota').value});msg($('ctMsg'),'Listo, recibimos tu solicitud. Te escribimos pronto.',true);e.target.reset()}
     catch(err){msg($('ctMsg'),'No se pudo enviar. Intenta de nuevo en un momento.',false)}
-    finally{if(btn)btn.disabled=false}
+    finally{if(btn){btn.disabled=false;btn.removeAttribute('aria-busy');btn.textContent=btn.dataset.t}}
   });
 })();
 </script>
