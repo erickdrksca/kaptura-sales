@@ -421,6 +421,17 @@ footer p{margin:10px 0 0;max-width:34ch}
 #proceso{background:var(--bg)!important}
 .story{background:var(--bg2)!important}
 .hero h1{font-size:clamp(40px,5.4vw,70px)!important;line-height:1.02!important}
+
+.legalnote{font-size:12.5px;color:var(--mut);margin:0;line-height:1.5}.legalnote a{color:var(--ink);text-decoration:underline}
+footer .legal a{color:var(--on-dark-mut);text-decoration:underline}
+
+.hero-media{position:relative}
+.hero-video{display:block;width:100%;height:auto;aspect-ratio:928/576;border-radius:18px;border:1px solid var(--line);background:#0F2A44;object-fit:cover}
+.vbtn{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(15,42,68,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:grid;place-items:center;cursor:pointer;padding:0}
+.vbtn svg{width:18px;height:18px;fill:#fff}
+.vbtn .i-play{display:none}
+.vbtn.paused .i-play{display:block}.vbtn.paused .i-pause{display:none}
+.vbtn:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -451,23 +462,13 @@ footer p{margin:10px 0 0;max-width:34ch}
         <a class="btn btn-line" href="/demo/" target="_blank" rel="noopener">Prueba la demo en línea ↗</a>
       </div>
     </div>
-    <div class="hero-media" style="position:relative;padding-bottom:30px">
-      <!-- VIDEO: cuando esté listo, reemplazar la tablet por:
-      <video class="hero-video" src="/video/kaptura.mp4" poster="/img/captura.webp" autoplay muted loop playsinline aria-label="Kaptura Sales en acción"></video> -->
-      <div class="tablet" role="img" aria-label="Pantalla de captura de pedidos en tablet">
-        <div class="screen">
-          <div class="s-top">kaptura sales · Galletera Valle <i>$87,344 hoy</i></div>
-          <div class="s-cli"><span><b>Depósito San José</b><br><small style="color:#5A6B7D">CL01003 · Laura Méndez</small></span><span style="text-align:right"><small style="color:#5A6B7D">Crédito</small><br><b>$30,000</b></span></div>
-          <div class="s-grid">
-            <div class="s-p on"><span>Galleta María 170 g</span><small>CJA24 · GAVA0001</small><div class="r"><b>$300</b><span class="qty"><u>−</u>3<u class="p">+</u></span></div></div>
-            <div class="s-p"><span>Animalitos 1 kg</span><small>BTO10 · GAVA0002</small><div class="r"><b>$252</b><span class="qty"><u>−</u>0<u class="p">+</u></span></div></div>
-            <div class="s-p on"><span>Rellena fresa 90 g</span><small>CJA30 · GAVA0004</small><div class="r"><b>$272</b><span class="qty"><u>−</u>2<u class="p">+</u></span></div></div>
-            <div class="s-p"><span>Avena 250 g</span><small>CJA12 · GAVA0006</small><div class="r"><b>$268</b><span class="qty"><u>−</u>0<u class="p">+</u></span></div></div>
-          </div>
-          <div class="s-bar"><span><small>Unidades</small>5</span><span><small>Ahorro</small>$70</span><span class="t"><small>Total</small>$1,444</span><span class="go">Guardar pedido</span></div>
-        </div>
-      </div>
-      <div class="ticket"><small style="color:var(--mut)">Comprobante enviado</small><b>EXPO-PV0101-42K</b>$1,444.00 · 2 productos<div class="ok">✓ El cliente lo recibió</div></div>
+    <div class="hero-media">
+      <video id="heroVideo" class="hero-video" src="/video/kaptura.mp4" poster="/img/kaptura-poster.webp" width="928" height="576" autoplay muted loop playsinline preload="metadata" aria-label="Video: cómo funciona Kaptura Sales, de la captura del pedido al tablero en tiempo real"></video>
+      <button type="button" class="vbtn" id="heroVideoBtn" aria-label="Pausar video">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      </button>
+    </div></div>
     </div>
   </div>
 </section>
@@ -667,6 +668,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
         </label>
         <div class="fld">Calificación<div class="rate" id="opRate" role="radiogroup" aria-label="Calificación"></div></div>
         <label class="fld" for="opTexto">Tu opinión<textarea id="opTexto" maxlength="500" placeholder="¿Qué te pareció capturar pedidos con Kaptura?"></textarea></label>
+        <p class="legalnote">Si se aprueba, publicaremos tu nombre, empresa y opinión. Al enviar aceptas el <a href="/privacidad">aviso de privacidad</a> y los <a href="/terminos">términos de uso</a>.</p>
         <button class="btn btn-acc" type="submit" id="opBtn">Enviar opinión</button>
         <p class="msg" id="opMsg" role="status"></p>
       </form>
@@ -697,6 +699,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
         <label class="fld" for="ctFecha">Fecha de tu expo<input id="ctFecha" maxlength="40" placeholder="Ej. marzo 2027"></label>
       </div>
       <label class="fld" for="ctNota">¿Cuántos proveedores o vendedores participan?<textarea id="ctNota" maxlength="500" style="min-height:80px"></textarea></label>
+      <p class="legalnote">Usaremos tus datos solo para contactarte sobre tu solicitud. Consulta el <a href="/privacidad">aviso de privacidad</a>.</p>
       <button class="btn btn-acc" type="submit">Enviar solicitud</button>
       <p class="msg" id="ctMsg" role="status"></p>
     </form>
@@ -709,7 +712,7 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
     <div><span class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="4" y="10" width="82" height="82" rx="22" fill="#F97316"/><path d="M32 30v44M32 54l24-24M40 47l18 27" stroke="#0F2A44" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="82" cy="16" r="12" fill="#14B8A6"/></svg>kaptura <span>sales</span></span><p>Plataforma de pedidos para expos y ventas mayoristas.</p></div>
     <div class="fcol"><b>Plataforma</b><a href="#beneficios">Beneficios</a><a href="#funciona">Así funciona</a><a href="#tableros">En vivo</a><a href="/demo/" target="_blank" rel="noopener">Probar la demo</a></div>
     <div class="fcol"><b>Empresa</b><a href="#proceso">Cómo trabajamos</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a></div>
-    <div class="legal"><span>© 2026 Kaptura Sales</span><span>Hecho en México</span></div>
+    <div class="legal"><span>© 2026 Kaptura Sales · Hecho en México</span><span><a href="/privacidad">Aviso de privacidad</a> · <a href="/terminos">Términos de uso</a></span></div>
   </div>
 </footer>
 
@@ -757,6 +760,14 @@ tabs.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));b.addEventListener('
     finally{if(btn){btn.disabled=false;btn.removeAttribute('aria-busy');btn.textContent=btn.dataset.t}}
   });
 })();
+</script>
+<script>
+(function(){var v=document.getElementById('heroVideo'),b=document.getElementById('heroVideoBtn');if(!v||!b)return;
+function sync(){var p=v.paused;b.classList.toggle('paused',p);b.setAttribute('aria-label',p?'Reproducir video':'Pausar video')}
+b.addEventListener('click',function(){if(v.paused){v.play()}else{v.pause()}});
+v.addEventListener('play',sync);v.addEventListener('pause',sync);
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause()}
+sync();})();
 </script>
 </body>
 </html>
