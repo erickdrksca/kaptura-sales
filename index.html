@@ -435,6 +435,17 @@ footer .legal a{color:var(--on-dark-mut);text-decoration:underline}
 
 #funciona .frame{border:0;border-radius:16px;background:transparent}
 #funciona .shots3 img{border-radius:16px}
+
+.pasos{display:flex;flex-direction:column;gap:64px}
+.paso{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:56px;align-items:center}
+.paso:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
+.paso:nth-child(even) img{order:2}
+.paso img{display:block;width:100%;height:auto;aspect-ratio:16/10;border-radius:18px;border:1px solid var(--line)}
+.ptxt{display:flex;flex-direction:column;gap:12px;max-width:44ch}
+.ptxt .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--acc-strong);color:#fff;font:700 14px var(--body)}
+.ptxt h3{font:600 clamp(24px,2.6vw,32px)/1.15 var(--body);letter-spacing:-.025em;color:var(--ink);margin:0}
+.ptxt p{margin:0;color:var(--mut);font-size:17px;line-height:1.6}
+@media (max-width:860px){.paso,.paso:nth-child(even){grid-template-columns:1fr;gap:20px}.paso:nth-child(even) img{order:0}}
 </style>
 </head>
 <body>
@@ -536,13 +547,22 @@ footer .legal a{color:var(--on-dark-mut);text-decoration:underline}
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Así funciona Kaptura</div>
-      <h2>Del stand al sistema, en tres pantallas.</h2>
+      <h2>Del stand al sistema, en tres pasos.</h2>
       <p>Capturas reales de la plataforma con datos de ejemplo.</p>
     </div>
-    <div class="shots3">
-      <figure class="shot"><div class="frame"><img src="/img/funciona-captura.webp" alt="Pantalla de captura de pedido con datos del cliente, crédito y resumen" width="1200" height="900" loading="lazy" decoding="async"></div><figcaption><span class="n">1</span><b>Captura de pedidos</b><span>El vendedor elige al cliente y ve su historial, crédito disponible y forma de pago antes de vender.</span></figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="/img/funciona-promociones.webp" alt="Catálogo con precios de expo, descuentos y productos en el pedido" width="1200" height="900" loading="lazy" decoding="async"></div><figcaption><span class="n">2</span><b>Promociones y tarimas</b><span>Cada producto muestra su precio de expo y descuento. Escalonadas, bonificaciones y tarimas se aplican solas.</span></figcaption></figure>
-      <figure class="shot"><div class="frame"><img src="/img/funciona-proveedor.webp" alt="Tablero del proveedor con objetivo, capturado y faltante" width="1200" height="900" loading="lazy" decoding="async"></div><figcaption><span class="n">3</span><b>Tablero del proveedor</b><span>Cada proveedor ve en vivo su objetivo, lo capturado y lo que le falta para llegar.</span></figcaption></figure>
+    <div class="pasos">
+      <div class="paso">
+        <img src="/img/paso-captura.webp" alt="Datos del pedido: cliente seleccionado con su historial, compra promedio, crédito disponible y lo que lleva en la expo" width="1600" height="1000" loading="lazy" decoding="async">
+        <div class="ptxt"><span class="n">1</span><h3>Captura de pedidos</h3><p>El vendedor elige al cliente y al instante ve su historial: lo que compró en la expo pasada, su compra promedio, su crédito disponible y lo que lleva en esta expo. Así vende con información, no a ciegas.</p></div>
+      </div>
+      <div class="paso">
+        <img src="/img/paso-promociones.webp" alt="Catálogo con precio de expo, precio regular tachado, porcentaje de descuento y cantidades en el pedido" width="1600" height="1000" loading="lazy" decoding="async">
+        <div class="ptxt"><span class="n">2</span><h3>Promociones y tarimas</h3><p>Cada producto muestra su precio de expo, el precio regular y el descuento. Escalonadas, bonificaciones y tarimas se aplican solas, y lo que va en el pedido queda resaltado.</p></div>
+      </div>
+      <div class="paso">
+        <img src="/img/paso-proveedor.webp" alt="Tablero del proveedor con objetivo, capturado, pedido actual y faltante" width="1600" height="1000" loading="lazy" decoding="async">
+        <div class="ptxt"><span class="n">3</span><h3>Tablero del proveedor</h3><p>Cada proveedor ve en vivo su objetivo de la expo, lo que lleva capturado y lo que le falta para llegar, incluso mientras arma el pedido.</p></div>
+      </div>
     </div>
   </div>
 </section>
